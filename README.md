@@ -40,16 +40,6 @@ The goal of this project is to implement an application called `movie-app` to ma
   
   `movie-ui` uses [`Semantic UI React`](https://react.semantic-ui.com/) as CSS-styled framework.
 
-## Creating OAuth2 apps for Social Login
-
-- **Github**
-
-  In the **Medium** article, [**How to Create an OAuth2 App in GitHub**](https://medium.com/@ivangfr/how-to-create-an-oauth2-app-in-github-8e273e376408), we will walk you through the process of creating an OAuth2 app in `GitHub`.
-
-- **Google**
-
-  In the **Medium** article, [**How to Create an OAuth2 App in Google**](https://medium.com/@ivangfr/how-to-create-an-oauth2-app-in-google-10e846d23adb), we will show in details how to create an OAuth2 app in `Google`.
-
 ## Prerequisites
 
 - [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
@@ -116,61 +106,6 @@ The goal of this project is to implement an application called `movie-app` to ma
 
   ![admin-login](documentation/admin-login.gif)
 
-## Testing movie-api Endpoints
-
-- **Manual Test**
-
-  - Access `movie-ui` at http://localhost:3000;
-
-  - Click `Login` and then, connect with `Github`;
-  
-  - Provide your `Github` credentials.
-
-- **Automatic Endpoints Test**
-
-  - Open a terminal and make sure you are in `springboot-react-social-login` root folder;
-
-  - Run the following script:
-    ```
-    ./movie-api/test-endpoints.sh
-    ```
-    It should return something like the output below, where it shows the http code for different requests:
-    ```
-    POST auth/authenticate
-    ======================
-    admin access token
-    ------------------
-    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1ODY2MjM1MjksImlhdCI6MTU4Nj..._ha2pM4LSSG3_d4exgA
-    
-    user access token
-    -----------------
-    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1ODY2MjM1MjksImlhdCIyOSwian...Y3z9uwhuW_nwaGX3cc5A
-    
-    POST auth/signup
-    ================
-    user2 access token
-    ------------------
-    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1ODY2MjM1MjksImanRpIjoiYTMw...KvhQbsMGAlFov1Q480qg
-
-    Authorization
-    =============
-                    Endpoints | without token |  user token |  admin token |
-    ------------------------- + ------------- + ----------- + ------------ |
-     GET public/numberOfUsers |           200 |         200 |          200 |
-    GET public/numberOfMovies |           200 |         200 |          200 |
-    ......................... + ............. + ........... + ............ |
-            GET /api/users/me |           401 |         200 |          200 |
-               GET /api/users |           401 |         403 |          200 |
-         GET /api/users/user2 |           401 |         403 |          200 |
-      DELETE /api/users/user2 |           401 |         403 |          200 |
-    ......................... + ............. + ........... + ............ |
-              GET /api/movies |           401 |         200 |          200 |
-             POST /api/movies |           401 |         403 |          201 |
-       DELETE /api/movies/abc |           401 |         403 |          200 |
-    ------------------------------------------------------------------------
-     [200] Success -  [201] Created -  [401] Unauthorized -  [403] Forbidden
-    ```
-
 ## Util Commands
 
 - **Postgres**
@@ -186,16 +121,4 @@ The goal of this project is to implement an application called `movie-app` to ma
 - To stop and remove docker compose containers, network and volumes, go to a terminal and, inside `springboot-react-social-login` root folder, run the command below:
   ```
   docker compose down -v
-  ```
-
-## How to upgrade movie-ui dependencies to latest version
-
-- In a terminal, make sure you are in `springboot-react-social-login/movie-ui` folder;
-
-- Run the following commands:
-  ```
-  npm upgrade
-  npm i -g npm-check-updates
-  ncu -u
-  npm install
   ```
