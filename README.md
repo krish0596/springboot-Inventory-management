@@ -122,3 +122,4 @@ The goal of this project is to implement an application called `movie-app` to ma
   ```
   docker compose down -v
   ```
+ll
