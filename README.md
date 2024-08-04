@@ -1,4 +1,4 @@
-# springboot-react-social-login
+# springboot-movie-management
 
 The goal of this project is to implement an application called `movie-app` to manage movies. For it, we will implement a back-end [`Spring Boot`](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html) application called `movie-api` and a font-end [React](https://react.dev/) application called `movie-ui`. Besides, we will use [`OAuth2`](https://en.wikipedia.org/wiki/OAuth#OAuth_2.0) (Social Login) to secure both applications.
 
@@ -122,4 +122,3 @@ The goal of this project is to implement an application called `movie-app` to ma
   ```
   docker compose down -v
   ```
-ll
