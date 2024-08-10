@@ -4,4 +4,4 @@ The goal of this project is to implement an application called movie-app to mana
 
 ## Project Diagram
 
-![project-diagram](documentation/project-diagram1.png)
+![project-diagram](asset/project-diagram1.png)
