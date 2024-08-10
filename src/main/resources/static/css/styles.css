@@ -1,0 +1,44 @@
+body {
+    background-color: #bebebe;
+}
+#Title {
+    background-image: url('../images/circuit.jpg');
+    color: white;
+    text-align: center;
+    height: 60px;
+}
+.thead-dark {
+    background-color: darkgreen;
+    color: white;
+}
+nav {
+    background-color: darkgreen;
+}
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+nav li {
+    display: inline;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 20px;
+}
+#Subheading {
+    background-color: green;
+    text-align: center;
+    color: white;
+}
+h6 {
+    text-align: center;
+}
+#purchase {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
